@@ -42,6 +42,24 @@ Você deverá executar o arquivo **Script Filmes.sql** em seu banco de dados SQL
 ## Objetivo
 Você deverá criar diversas consultas, com o objetivo de retornar os dados a seguir. Abaixo de cada pedido tem o retorno esperado. O seu retorno deve ser igual ao da imagem.
 
+
+##Resposta Desafio:
+1) SELECT * FROM Filmes
+2) SELECT * FROM Filmes ORDER BY Ano 
+3) SELECT * FROM Filmes WHERE Ano = '1985'
+4) SELECT * FROM Filmes WHERE Ano = '1997'
+5) SELECT * FROM Filmes WHERE Ano > '2000' 
+6) SELECT * FROM Filmes WHERE Duracao > '100' and Duracao <'150' ORDER BY Duracao
+7) SELECT Ano, COUNT(*) AS Quantidade FROM Filmes GROUP BY Ano ORDER BY Quantidade DESC
+8) SELECT * FROM Atores WHERE Genero = 'M'
+9)SELECT * FROM Atores WHERE Genero = 'F' ORDER BY 'PrimeiroNome'
+10)SELECT Nome, Genero FROM Filmes, Generos
+11)SELECT Nome, Genero FROM Filmes, Generos WHERE Genero ='Mistério'
+12)SELECT Filmes.Nome, Atores.PrimeiroNome, Atores.UltimoNome, ElencoFilme.Papel FROM Filmes
+INNER JOIN ElencoFilme ON Filmes.Id = ElencoFilme.IdFilme
+INNER JOIN Atores ON ElencoFilme.IdAtor = Atores.Id;
+
+
 ## 1 - Buscar o nome e ano dos filmes
 
 ![Exercicio 1](Imagens/1.png)
